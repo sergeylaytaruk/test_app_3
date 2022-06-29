@@ -16,7 +16,7 @@
 </html>
 <?php
 if ($_GET['login'] == 'admin' && $_GET['pass'] == '123456') {
-    $_SESSION['token'] = 'huinya';
+    $_SESSION['token'] = 'IrinaPerepelica';
 }
 var_dump($_SESSION);
 
