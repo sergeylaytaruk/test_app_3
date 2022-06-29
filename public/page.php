@@ -42,7 +42,6 @@
             url: "ajax.php",
             data: {},
             success: function(response){
-                console.error( "Data: " + response);
                 $('#table-container').empty();
                 var htmlOut = "<table style='width:100%;'><tr><th>type</th><th>comment</th><th>sum</th></tr>";
                 if (response.data.length > 0) {
@@ -57,7 +56,6 @@
                 }
                 htmlOut += `<TR><td colspan='2'>total</td><td>${response['sum_total']}</td></TR>`;
                 htmlOut += "</table>";
-                //console.error("htmlOut=", htmlOut);
                 $('#table-container').html(htmlOut);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -80,7 +78,6 @@
                 'comment': comment
             },
             success: function(response){
-                console.error( "Data: " + response);
                 getAll();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -99,7 +96,6 @@
                 'id': id
             },
             success: function(response){
-                console.error( "Data: " + response);
                 getAll();
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {

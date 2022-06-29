@@ -91,7 +91,6 @@ class mydb
             $id = $_POST['id'];
             $data = ['id' => $id];
             $stmt = $this->pdo->prepare( "DELETE FROM tb1 WHERE id =:id");
-            //$stmt->bindParam(':id', $id);
             $stmt->execute($data);
             echo json_encode(['message' => 'OK']);
         } catch (\Throwable $ex) {
